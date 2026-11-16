@@ -3,158 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jhorman Anthony Duarte Argüello | Ingeniero en Sistemas</title>
-    <meta name="description" content="Perfil biográfico oficial y portafolio tecnológico de Jhorman Anthony Duarte Argüello, Ingeniero en Sistemas e investigador de Puerto Cabezas, Nicaragua.">
+    <title>Jhorman Anthony Duarte Argüello | Perfil Biográfico Oficial</title>
+    
+    <!-- Metadatos SEO y de Identidad -->
+    <meta name="description" content="Sitio biográfico oficial de Jhorman Anthony Duarte Argüello (German Duarte). Ingeniero en Sistemas, investigador y tecnólogo de Puerto Cabezas, Nicaragua.">
+    <meta name="author" content="Jhorman Anthony Duarte Argüello">
+
+    <!-- DATOS ESTRUCTURADOS (Schema.org) para motores de búsqueda -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Jhorman Anthony Duarte Argüello",
+      "alternateName": "German Duarte",
+      "birthDate": "1998-12-18",
+      "birthPlace": {
+        "@type": "Place",
+        "name": "Puerto Cabezas, Bilwi, RACCN, Nicaragua"
+      },
+      "jobTitle": "Ingeniero en Sistemas",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Independiente / Tecnologías y Operaciones"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Bluefields Indian & Caribbean University (BICU)"
+      },
+      "spouse": {
+        "@type": "Person",
+        "name": "Leticia Flores Labonte"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Puerto Cabezas, Bilwi, Nicaragua"
+      },
+      "sameAs": [
+        "https://github.com/jhorman-duarte"
+      ]
+    }
+    </script>
+
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
+            --bg-color: #0b0f19;
+            --card-bg: #131c2e;
+            --text-main: #f1f5f9;
             --text-muted: #94a3b8;
             --accent: #38bdf8;
-            --accent-secondary: #10b981;
-            --border: #334155;
+            --accent-green: #34d399;
+            --border: #1e293b;
         }
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.7;
+            line-height: 1.8;
             margin: 0;
             padding: 0;
         }
         header {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            background: linear-gradient(180deg, #131c2e 0%, #0b0f19 100%);
             border-bottom: 1px solid var(--border);
             padding: 4rem 1rem 3rem 1rem;
             text-align: center;
         }
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             margin: 0 0 0.5rem 0;
-            background: linear-gradient(to right, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #ffffff;
+            letter-spacing: -0.5px;
         }
         header p {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            margin: 0 0 1.5rem 0;
+            font-size: 1.25rem;
+            color: var(--accent);
+            margin: 0;
+            font-weight: 400;
         }
         .container {
-            max-width: 900px;
+            max-width: 850px;
             margin: 2.5rem auto;
             padding: 0 1.5rem;
         }
-        .card {
+        .bio-section {
             background-color: var(--card-bg);
             border: 1px solid var(--border);
             border-radius: 12px;
-            padding: 2rem;
+            padding: 2.5rem;
             margin-bottom: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
         }
-        .card h2 {
-            font-size: 1.4rem;
-            color: var(--accent);
+        .bio-section h2 {
+            font-size: 1.5rem;
+            color: var(--accent-green);
             margin-top: 0;
             border-bottom: 1px solid var(--border);
             padding-bottom: 0.75rem;
         }
-        .card p {
+        .bio-section p {
             color: #cbd5e1;
-            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+            text-align: justify;
         }
-        .grid-info {
+        .factbox {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
             margin-top: 1.5rem;
-        }
-        .info-box {
-            background: rgba(15, 23, 42, 0.6);
+            background: rgba(15, 23, 42, 0.5);
             border: 1px solid var(--border);
-            padding: 1.25rem;
+            padding: 1.5rem;
             border-radius: 8px;
         }
-        .info-box h3 {
+        .fact-item strong {
+            color: var(--accent);
+            display: block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .fact-item span {
+            color: #f8fafc;
             font-size: 1rem;
-            color: var(--accent-secondary);
-            margin-top: 0;
-            margin-bottom: 0.5rem;
         }
-        /* Contenedor de video avanzado */
-        .video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* Proporción 16:9 */
-            height: 0;
-            overflow: hidden;
-            border-radius: 8px;
-            border: 1px solid var(--border);
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
             margin-top: 1rem;
         }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
+        .badge-tag {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
         }
-        /* Botones de acción final para redes sociales */
-        .action-footer-section {
-            text-align: center;
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-            border: 1px solid var(--accent);
-            border-radius: 12px;
-            padding: 2.5rem;
-            margin-top: 3rem;
-        }
-        .action-footer-section h3 {
-            color: var(--text-main);
-            margin-top: 0;
-            font-size: 1.5rem;
-        }
-        .action-buttons {
+        .social-bar {
             display: flex;
             justify-content: center;
             gap: 1rem;
             flex-wrap: wrap;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
         }
-        .cta-btn {
-            background-color: var(--accent);
-            color: #0f172a;
-            padding: 0.75rem 1.5rem;
-            border-radius: 9999px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(56, 189, 248, 0.3);
-        }
-        .cta-btn:hover {
-            background-color: #7dd3fc;
-            transform: translateY(-2px);
-        }
-        .cta-btn.secondary {
-            background-color: transparent;
-            color: var(--text-main);
-            border: 1px solid var(--border);
-            box-shadow: none;
-        }
-        .cta-btn.secondary:hover {
-            border-color: var(--accent);
+        .btn-link {
+            background: #1e293b;
             color: var(--accent);
+            border: 1px solid var(--border);
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .btn-link:hover {
+            background: var(--accent);
+            color: #0b0f19;
         }
         footer {
             text-align: center;
-            padding: 2rem;
+            padding: 3rem;
             color: var(--text-muted);
             font-size: 0.85rem;
             border-top: 1px solid var(--border);
-            margin-top: 2rem;
         }
     </style>
 </head>
@@ -162,65 +176,73 @@
 
     <header>
         <h1>Jhorman Anthony Duarte Argüello</h1>
-        <p>&lt;/&gt; Ingeniero en Sistemas | Investigador Tecnológico & Operaciones</p>
+        <p>Ingeniero en Sistemas e Investigador Tecnológico</p>
     </header>
 
     <div class="container">
         
-        <!-- Sección Biográfica -->
-        <div class="card">
-            <h2>👤 Resumen Biográfico</h2>
-            <p><strong>Jhorman Anthony Duarte Argüello</strong> (conocido en su entorno como <em>German</em>) nació el 18 de diciembre de 1998. Es un Ingeniero en Sistemas nicaragüense enfocado en el desarrollo de soluciones tecnológicas, análisis de procesos y gestión operativa.</p>
-            <p>Residente en Puerto Cabezas (Bilwi), RACCN, Nicaragua. Casado con la Lic. Leticia Flores Labonte desde el 18 de mayo de 2019, y padre de Leandro Jorel y Jarilyn Latisha.</p>
-        </div>
-
-        <!-- Trayectoria y Tesis -->
-        <div class="card">
-            <h2>🎓 Trayectoria Académica e Investigación</h2>
-            <p>Titulado como <strong>Ingeniero en Sistemas</strong> por la Bluefields Indian & Caribbean University (BICU) - Núcleo Bilwi en mayo de 2024, con reconocimiento de honor al Primer Lugar de Rendimiento Académico en 2021 (81.69/100).</p>
-            <p>Su proyecto monográfico destacado: <em>"Propuesta de aplicación de drones autónomos para el cuido y seguimiento de las siembras de arroz de la Universidad BICU - Núcleo Bilwi"</em>.</p>
-        </div>
-
-        <!-- Ficha Técnica -->
-        <div class="card">
-            <h2>📊 Ficha Técnica e Identidad Profesional</h2>
-            <div class="grid-info">
-                <div class="info-box">
-                    <h3>Stack Tecnológico</h3>
-                    <p>Lenguaje C, PHPMyAdmin, WampServer, XAMPP, Consola CMD / PowerShell, Redes Wi-Fi y Mantenimiento de Hardware.</p>
+        <!-- Bloque Principal Biográfico -->
+        <div class="bio-section">
+            <h2>Biografía</h2>
+            <p><strong>Jhorman Anthony Duarte Argüello</strong> (conocido popularmente como <em>German</em>) es un Ingeniero en Sistemas, investigador y tecnólogo nicaragüense, oriundo de Puerto Cabezas (Bilwi), en la Región Autónoma de la Costa Caribe Norte de Nicaragua (RACCN). Nació el 18 de diciembre de 1998 y ha desarrollado su vida personal y profesional en su ciudad natal.</p>
+            <p>A lo largo de su trayectoria se ha distinguido por combinar el rigor de la ingeniería informática con una sólida base en operaciones, logística y gestión administrativa, destacando en el desarrollo de soluciones tecnológicas aplicadas a su región y su activa participación en eventos científicos y tecnológicos nacionales.</p>
+            
+            <!-- Ficha técnica rápida -->
+            <div class="factbox">
+                <div class="fact-item">
+                    <strong>Nacimiento</strong>
+                    <span>18 de diciembre de 1998</span>
                 </div>
-                <div class="info-box">
-                    <h3>Certificaciones</h3>
-                    <p>Especializaciones de Google Activate (Comercio Electrónico, Transformación Digital, Marketing) y Cámara de Comercio de Bogotá.</p>
+                <div class="fact-item">
+                    <strong>Ocupación</strong>
+                    <span>Ingeniero en Sistemas</span>
+                </div>
+                <div class="fact-item">
+                    <strong>Educación</strong>
+                    <span>BICU (Título 2024)</span>
+                </div>
+                <div class="fact-item">
+                    <strong>Cónyuge</strong>
+                    <span>Leticia Flores Labonte</span>
                 </div>
             </div>
         </div>
 
-        <!-- Apartado Multimedia Avanzado (Ejemplo de integración estilo YouTube) -->
-        <div class="card">
-            <h2>🎬 Canal Multimedia e Interés Tecnológico</h2>
-            <p>Espacio dedicado a la divulgación de proyectos de ingeniería, tecnología aplicada y sistemas autónomos en la Costa Caribe Norte.</p>
-            <div class="video-container">
-                <!-- Aquí puedes cambiar el enlace del iframe por cualquier video de YouTube que desees mostrar -->
-                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video de muestra" allowfullscreen></iframe>
-            </div>
+        <!-- Formación Académica y Tesis -->
+        <div class="bio-section">
+            <h2>Trayectoria Académica e Investigación</h2>
+            <p>Cursó sus estudios superiores en la <strong>Bluefields Indian & Caribbean University (BICU) - Núcleo Bilwi</strong>, obteniendo el título de Ingeniero en Sistemas en mayo de 2024. Su excelencia académica fue galardonada con el Primer Lugar de Rendimiento Académico de su carrera en 2021.</p>
+            <p>Su proyecto de titulación consistió en la investigación titulada <em>"Propuesta de aplicación de drones autónomos para el cuido y seguimiento de las siembras de arroz de la Universidad BICU - Núcleo Bilwi"</em>, una propuesta tecnológica orientada a la automatización del monitoreo agrícola mediante sistemas aéreos no tripulados.</p>
         </div>
 
-        <!-- Bloque Final con Botones de Llamado a la Acción (Redes Sociales y Contacto) -->
-        <div class="action-footer-section">
-            <h3>¿Deseas conectar o conocer más?</h3>
-            <p>Puedes comunicarte directamente o revisar mis perfiles profesionales en los siguientes enlaces:</p>
-            <div class="action-buttons">
-                <a href="https://github.com/jhorman-duarte" target="_blank" class="cta-btn">Ver GitHub</a>
-                <a href="mailto:Jhormanduarte65@gmail.com" class="cta-btn secondary">Enviar Correo</a>
-                <a href="tel:+50584455417" class="cta-btn secondary">Llamar / WhatsApp (+505 8445-5417)</a>
+        <!-- Certificaciones, Robótica y Reconocimientos -->
+        <div class="bio-section">
+            <h2>Certificaciones, Robótica y Méritos Científicos</h2>
+            <p>Su perfil técnico se respalda mediante diversas especializaciones orientadas a la transformación digital y el desarrollo corporativo:</p>
+            
+            <div class="badge-list">
+                <span class="badge-tag">2da Olimpiada Nacional de Robótica (Categoría Senior, BICU 2018)</span>
+                <span class="badge-tag">X Jornada de Desarrollo Científico (JUDC)</span>
+                <span class="badge-tag">Google Activate: Comercio Electrónico (40h)</span>
+                <span class="badge-tag">Google Activate: Transformación Digital (40h)</span>
+                <span class="badge-tag">Google Activate: Marketing Digital y Productividad</span>
+                <span class="badge-tag">Cámara de Comercio de Bogotá: Estrategia Digital</span>
             </div>
+            
+            <p style="margin-top: 1.2rem;">Asimismo, ha participado activamente en iniciativas de impacto social y comunitario, incluyendo su labor en brigadas de alfabetización (MINED) y soporte tecnológico e institucional en la Iglesia Morava Central Criolla.</p>
+        </div>
+
+        <!-- Barra de Redes y Enlaces Oficiales -->
+        <div class="social-bar">
+            <a href="https://github.com/jhorman-duarte" target="_blank" class="btn-link">Perfil de GitHub</a>
+            <a href="mailto:Jhormanduarte65@gmail.com" class="btn-link">Correo de Contacto</a>
+            <a href="tel:+50584455417" class="btn-link">Teléfono Oficial</a>
         </div>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 Jhorman Anthony Duarte Argüello. Todos los derechos reservados. | Publicado vía GitHub Pages.</p>
+        <p>&copy; 2026 Jhorman Anthony Duarte Argüello. Enciclopedia Biográfica y Perfil Oficial.</p>
     </footer>
 
 </body>
