@@ -3,98 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jhorman Anthony Duarte Argüello - Ingeniero en Sistemas</title>
+    <title>Jhorman Anthony Duarte Argüello | Ingeniero en Sistemas</title>
+    <meta name="description" content="Perfil biográfico oficial y portafolio tecnológico de Jhorman Anthony Duarte Argüello, Ingeniero en Sistemas e investigador de Puerto Cabezas, Nicaragua.">
     <style>
-        :root { --primary: #2c3e50; --secondary: #16a085; --bg: #eef2f3; --card-bg: #ffffff; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: var(--bg); color: #333; }
-        header { background: linear-gradient(135deg, #1abc9c, #16a085); color: #fff; padding: 3rem 1rem; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        header h1 { margin: 0 0 0.5rem; font-size: 2.5rem; letter-spacing: 1px; }
-        header p { margin: 0 0 1rem; font-size: 1.3rem; font-weight: 300; }
-        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
-        section { background: var(--card-bg); padding: 2rem; margin-bottom: 1.5rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-left: 5px solid var(--secondary); }
-        h2 { color: var(--primary); border-bottom: 2px solid #ecf0f1; padding-bottom: 0.5rem; margin-top: 0; font-size: 1.5rem; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 0.8rem; }
-        .contact-info { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-top: 1.5rem; font-size: 0.95rem; }
-        .contact-info div { background: rgba(0, 0, 0, 0.2); padding: 0.5rem 1.2rem; border-radius: 20px; color: #fff; }
-        .badge { display: inline-block; background: #e8f8f5; color: #16a085; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem; font-weight: bold; margin-right: 0.5rem; }
-        footer { text-align: center; padding: 2rem; color: #7f8c8d; font-size: 0.9rem; }
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-secondary: #10b981;
+            --border: #334155;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 4rem 1rem 3rem 1rem;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0 0 0.5rem 0;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin: 0 0 1.5rem 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .card h2 {
+            font-size: 1.4rem;
+            color: var(--accent);
+            margin-top: 0;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.75rem;
+        }
+        .card p {
+            color: #cbd5e1;
+            margin-bottom: 1rem;
+        }
+        .grid-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .info-box {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border);
+            padding: 1.25rem;
+            border-radius: 8px;
+        }
+        .info-box h3 {
+            font-size: 1rem;
+            color: var(--accent-secondary);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        /* Contenedor de video avanzado */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Proporción 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            margin-top: 1rem;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        /* Botones de acción final para redes sociales */
+        .action-footer-section {
+            text-align: center;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-top: 3rem;
+        }
+        .action-footer-section h3 {
+            color: var(--text-main);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        .cta-btn {
+            background-color: var(--accent);
+            color: #0f172a;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(56, 189, 248, 0.3);
+        }
+        .cta-btn:hover {
+            background-color: #7dd3fc;
+            transform: translateY(-2px);
+        }
+        .cta-btn.secondary {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            box-shadow: none;
+        }
+        .cta-btn.secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            margin-top: 2rem;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Jhorman Anthony Duarte Argüello</h1>
-        <p>Ingeniero en Sistemas | Especialista en Tecnologías y Operaciones</p>
-        <div class="contact-info">
-            <div>📍 Puerto Cabezas / Bilwi, RACCN, Nicaragua</div>
-            <div>📞 +505 8445-5417</div>
-            <div>✉️ Jhormanduarte65@gmail.com</div>
-        </div>
+        <p>&lt;/&gt; Ingeniero en Sistemas | Investigador Tecnológico & Operaciones</p>
     </header>
 
     <div class="container">
-        <section>
-            <h2>Perfil Profesional</h2>
-            <p>Ingeniero en Sistemas con sólida experiencia formal en la industria y una base operacional única en ventas, logística, administración y soporte tecnológico. Mi valor reside en analizar procesos de negocio e implementar soluciones tecnológicas efectivas, estructurando el caos y liderando mejoras multidisciplinarias.</p>
-        </section>
+        
+        <!-- Sección Biográfica -->
+        <div class="card">
+            <h2>👤 Resumen Biográfico</h2>
+            <p><strong>Jhorman Anthony Duarte Argüello</strong> (conocido en su entorno como <em>German</em>) nació el 18 de diciembre de 1998. Es un Ingeniero en Sistemas nicaragüense enfocado en el desarrollo de soluciones tecnológicas, análisis de procesos y gestión operativa.</p>
+            <p>Residente en Puerto Cabezas (Bilwi), RACCN, Nicaragua. Casado con la Lic. Leticia Flores Labonte desde el 18 de mayo de 2019, y padre de Leandro Jorel y Jarilyn Latisha.</p>
+        </div>
 
-        <section>
-            <h2>Formación Académica y Tesis</h2>
-            <ul>
-                <li><strong>Ingeniería en Sistemas:</strong> Bluefields Indian & Caribbean University (BICU), Núcleo Bilwi (Título emitido en mayo de 2024).</li>
-                <li><strong>Reconocimiento de Honor:</strong> Primer Lugar de Rendimiento Académico de la carrera de Sistemas (2021) con promedio de 81.69/100.</li>
-                <li><strong>Proyecto Monográfico (Tesis):</strong> Propuesta de aplicación de drones autónomos para el cuido y seguimiento de las siembras de arroz de la Universidad BICU - Núcleo Bilwi.</li>
-            </ul>
-        </section>
+        <!-- Trayectoria y Tesis -->
+        <div class="card">
+            <h2>🎓 Trayectoria Académica e Investigación</h2>
+            <p>Titulado como <strong>Ingeniero en Sistemas</strong> por la Bluefields Indian & Caribbean University (BICU) - Núcleo Bilwi en mayo de 2024, con reconocimiento de honor al Primer Lugar de Rendimiento Académico en 2021 (81.69/100).</p>
+            <p>Su proyecto monográfico destacado: <em>"Propuesta de aplicación de drones autónomos para el cuido y seguimiento de las siembras de arroz de la Universidad BICU - Núcleo Bilwi"</em>.</p>
+        </div>
 
-        <section>
-            <h2>Habilidades Técnicas y Tecnologías</h2>
-            <ul>
-                <li><strong>Programación y Desarrollo:</strong> Lenguaje C.</li>
-                <li><strong>Bases de Datos y Servidores Locales:</strong> PHPMyAdmin, WampServer, XAMPP Server.</li>
-                <li><strong>Sistemas y Herramientas de Consola:</strong> Windows, CMD, PowerShell, optimización de sistemas y mantenimiento de hardware/software.</li>
-                <li><strong>Redes y Soporte:</strong> Configuración de redes Wi-Fi y mantenimiento técnico preventivo/correctivo.</li>
-            </ul>
-        </section>
+        <!-- Ficha Técnica -->
+        <div class="card">
+            <h2>📊 Ficha Técnica e Identidad Profesional</h2>
+            <div class="grid-info">
+                <div class="info-box">
+                    <h3>Stack Tecnológico</h3>
+                    <p>Lenguaje C, PHPMyAdmin, WampServer, XAMPP, Consola CMD / PowerShell, Redes Wi-Fi y Mantenimiento de Hardware.</p>
+                </div>
+                <div class="info-box">
+                    <h3>Certificaciones</h3>
+                    <p>Especializaciones de Google Activate (Comercio Electrónico, Transformación Digital, Marketing) y Cámara de Comercio de Bogotá.</p>
+                </div>
+            </div>
+        </div>
 
-        <section>
-            <h2>Experiencia Profesional</h2>
-            <ul>
-                <li><strong>Asistente Administrativo y de Operaciones — Iglesia Morava Central Criolla</strong> Gestión administrativa, pago de nóminas, creación de boletines, representación institucional y mantenimiento de equipos electrónicos.</li>
-                <li><strong>Servicio al Cliente y Caja — Pio Pio Nicaragua</strong> Atención en mostrador, manejo de caja registradora y control de pedidos.</li>
-                <li><strong>Dependiente de Tienda y Auxiliar de Ventas — Tienda Aria</strong> Ventas directas, recepción, clasificación y gestión de inventario de mercancías.</li>
-                <li><strong>Docente de Apoyo (5to Grado) — Colegio Moravo Primaria Doris Robb Gabay</strong> Planificación curricular y adaptación de material didáctico en Lengua, Literatura y Geografía.</li>
-                <li><strong>Auxiliar de Gasolinera — Gasolinera Manatí</strong> Suministro de combustible y transacciones bajo estrictos protocolos de seguridad.</li>
-            </ul>
-        </section>
+        <!-- Apartado Multimedia Avanzado (Ejemplo de integración estilo YouTube) -->
+        <div class="card">
+            <h2>🎬 Canal Multimedia e Interés Tecnológico</h2>
+            <p>Espacio dedicado a la divulgación de proyectos de ingeniería, tecnología aplicada y sistemas autónomos en la Costa Caribe Norte.</p>
+            <div class="video-container">
+                <!-- Aquí puedes cambiar el enlace del iframe por cualquier video de YouTube que desees mostrar -->
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video de muestra" allowfullscreen></iframe>
+            </div>
+        </div>
 
-        <section>
-            <h2>Certificaciones y Cursos Especializados</h2>
-            <ul>
-                <li><span class="badge">Google Activate</span> Comercio Electrónico (40h) y Transformación Digital para el Empleo (40h).</li>
-                <li><span class="badge">Google Activate</span> Fundamentos de Marketing Digital y Productividad Personal (40h).</li>
-                <li><span class="badge">Cámara de Comercio de Bogotá</span> Curso Virtual: Diseña una Estrategia Digital para tu Empresa.</li>
-                <li><span class="badge">BICU</span> Participación en la 2da Olimpiada Nacional de Robótica (Categoría Senior, 2018) y X Jornada de Desarrollo Científico (JUDC).</li>
-            </ul>
-        </section>
+        <!-- Bloque Final con Botones de Llamado a la Acción (Redes Sociales y Contacto) -->
+        <div class="action-footer-section">
+            <h3>¿Deseas conectar o conocer más?</h3>
+            <p>Puedes comunicarte directamente o revisar mis perfiles profesionales en los siguientes enlaces:</p>
+            <div class="action-buttons">
+                <a href="https://github.com/jhorman-duarte" target="_blank" class="cta-btn">Ver GitHub</a>
+                <a href="mailto:Jhormanduarte65@gmail.com" class="cta-btn secondary">Enviar Correo</a>
+                <a href="tel:+50584455417" class="cta-btn secondary">Llamar / WhatsApp (+505 8445-5417)</a>
+            </div>
+        </div>
 
-        <section>
-            <h2>Voluntariado y Compromiso Social</h2>
-            <ul>
-                <li>Participación activa en las Brigadas de Alfabetización de la "Campaña Nacional por una Nicaragua Libre de Analfabetismo" (MINED, 2015).</li>
-                <li>Voluntariado de apoyo educativo y desarrollo infantil en Puerto Cabezas.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Información Personal y Familiar</h2>
-            <p>Natural de Nicaragua, residente en Filimon Rivera (detrás de la Bloquera Maní), Puerto Cabezas / Bilwi, RACCN. Casado con la Lic. Leticia Flores Labonte desde el 18 de mayo de 2019. Padre de dos hijos: <strong>Leandro Jorel Duarte Flores</strong> y <strong>Jarilyn Latisha Duarte Flores</strong>.</p>
-        </section>
     </div>
 
     <footer>
-        <p>&copy; 2026 Jhorman Anthony Duarte Argüello. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Jhorman Anthony Duarte Argüello. Todos los derechos reservados. | Publicado vía GitHub Pages.</p>
     </footer>
 
 </body>
